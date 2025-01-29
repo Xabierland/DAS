@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.widget.EditText;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
@@ -21,12 +22,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        EditText editText = findViewById(R.id.editText);
         Button button = findViewById(R.id.button);
         TextView textView = findViewById(R.id.textView);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Ponemos el texto del EditText en el TextView
+                textView.setText(editText.getText().toString());
+                //No se que hace esto, yo no he hecho nada se lo he copiado a ibai
                 // Crear y aplicar la animación de rotación
                 RotateAnimation rotateAnimation = new RotateAnimation(
                     0f, 45f,

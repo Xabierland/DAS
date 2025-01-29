@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Neure Aplikazioa</string>
+    <string name="hello_world">Kaixo Mundua!</string>
+    <string name="activity1">Aktibitatea 1</string>
+    <string name="activity2">Aktibitatea 2</string>
+    <string name="hello_activity">Kaixo Aktibitatea!</string>
+</resources>
