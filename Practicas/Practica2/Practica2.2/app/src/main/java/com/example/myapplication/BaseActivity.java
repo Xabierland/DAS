@@ -9,6 +9,11 @@ import java.util.Locale;
 public abstract class BaseActivity extends AppCompatActivity {
     protected static final String LANGUAGE_KEY = "language_key";
     
+    // Este metodo es el primero que se ejecuta al crear una actividad
+    // Al llamarse antes del onCreate, se puede modificar el contexto de la actividad
+    // De esta forma, se puede cambiar el idioma de la actividad antes de que se cree
+    // Es por esto que he hecho que todas las demas actividades hereden de esta
+    // No me escondo, la idea me la ha dado Claude
     @Override
     protected void attachBaseContext(Context newBase) {
         String savedLanguage = newBase.getSharedPreferences("Settings", MODE_PRIVATE)
