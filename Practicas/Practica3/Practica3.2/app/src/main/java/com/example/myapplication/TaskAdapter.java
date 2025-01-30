@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,22 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
     public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
         String task = taskList.get(position);
         holder.taskText.setText(task);
+
+        // Configurar el listener de pulsación larga
+        holder.itemView.setOnLongClickListener(v -> {
+            new AlertDialog.Builder(v.getContext())
+                .setTitle("Eliminar tarea")
+                .setMessage("¿Estás seguro de que quieres eliminar esta tarea?")
+                .setPositiveButton("Sí", (dialog, which) -> {
+                    // Eliminar el item
+                    taskList.remove(position);
+                    notifyItemRemoved(position);
+                    notifyItemRangeChanged(position, taskList.size());
+                })
+                .setNegativeButton("No", null)
+                .show();
+            return true;
+        });
     }
 
     @Override
