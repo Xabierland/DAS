@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema principal de la aplicación -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
+        <item name="colorPrimary">#6200EE</item>
+        <item name="colorPrimaryDark">#3700B3</item>
+        <item name="colorAccent">#03DAC5</item>
+        <item name="android:windowBackground">?android:colorBackground</item>
+        <item name="android:fontFamily">@font/comic</item>
+    </style>
+
+    <!-- Estilo para los botones -->
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">#6200EE</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:padding">11dp</item>
+    </style>
+
+    <!-- Estilo para los textos de los títulos -->
+    <style name="TitleTextStyle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!-- Estilo para los elementos del ListView -->
+    <style name="ListViewItemStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:padding">10dp</item>
+    </style>
+</resources>
